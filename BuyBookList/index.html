@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+        *{ margin:0; padding:0;}
+		#tab{ width:600px; height:300px; margin: 60px auto; border:1px solid black; background:#FCC;}
+		#tab td{ border:1px solid black; text-align:center;}
+		img{ width:90px; height:80px;}
+		.bt1{ width:50px; text-align:center;}
+		#allt1{ width:100px; text-align:center;}
+		.btn1,.btn2{ width:20px; height:20px;}
+		font{ font-size:20px;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+window.onload=function()
+{
+	var tab=document.getElementById('tab');
+	var btn1=tab.getElementsByClassName('btn1');
+	var btn2=tab.getElementsByClassName('btn2');
+	var bt1=tab.getElementsByClassName('bt1');
+	var allt1=document.getElementById('allt1');
+	var b1sums=document.getElementById('b1sum');
+	var b2sums=document.getElementById('b2sum');
+	var b3sums=document.getElementById('b3sum');
+	
+	var i=0;
+	var b=0;
+	var sum1=0;
+	var sum2=0;
+	var sum3=0;
+	var b1=30;
+	var b2=40;
+	var b3=50;
+	var b1sum=0;
+	var b2sum=0;
+	var b3sum=0;
+		btn1[0].onclick=function()
+		{
+				if(sum1!=0)
+				{
+					sum1=bt1[0].value;
+				    sum1=sum1-1;
+     				bt1[0].value=sum1;
+					b1sums.innerHTML=sum1*b1;
+					var allsum=parseInt(b1sums.innerHTML)+parseInt(b2sums.innerHTML)+parseInt(b3sums.innerHTML);
+					allt1.value=allsum;
+				 }
+			}
+		
+		 btn2[0].onclick=function()
+		{
+				    sum1=sum1+1;
+     				bt1[0].value=sum1;
+					b1sums.innerHTML=sum1*b1;
+					var allsum=parseInt(b1sums.innerHTML)+parseInt(b2sums.innerHTML)+parseInt(b3sums.innerHTML);
+					allt1.value=allsum;
+			}
+		
+		btn1[1].onclick=function()
+		{
+				if(sum2!=0)
+				{
+					sum2=bt1[1].value;
+				    sum2=sum2-1;
+     				bt1[1].value=sum2;
+					b2sums.innerHTML=sum2*b2;
+					var allsum=parseInt(b1sums.innerHTML)+parseInt(b2sums.innerHTML)+parseInt(b3sums.innerHTML);
+					allt1.value=allsum;
+				 }
+			}
+		
+		 btn2[1].onclick=function()
+		{
+				    sum2=sum2+1;
+     				bt1[1].value=sum2;
+					b2sums.innerHTML=sum2*b2;
+					var allsum=parseInt(b1sums.innerHTML)+parseInt(b2sums.innerHTML)+parseInt(b3sums.innerHTML);
+					allt1.value=allsum;
+			}
+		
+		btn1[2].onclick=function()
+		{
+				if(sum3!=0)
+				{
+					sum3=bt1[2].value;
+				    sum3=sum3-1;
+     				bt1[2].value=sum3;
+					b3sums.innerHTML=sum3*b3;
+					var allsum=parseInt(b1sums.innerHTML)+parseInt(b2sums.innerHTML)+parseInt(b3sums.innerHTML);
+					allt1.value=allsum;
+				 }
+			}
+		
+		 btn2[2].onclick=function()
+		{
+				    sum3=sum3+1;
+     				bt1[2].value=sum3;
+					b3sums.innerHTML=sum3*b3;
+					var allsum=parseInt(b1sums.innerHTML)+parseInt(b2sums.innerHTML)+parseInt(b3sums.innerHTML);
+					allt1.value=allsum;
+			}
+	     
+		 
+	}
+</script>
+</head>
+
+<body>
+       <table id="tab" cellspacing="0" cellpadding="0">
+               <tr><td>书籍</td><td>单价</td><td>数量</td><td>合计</td></tr>
+               <tr>
+                   <td><img src="image/b1.jpg" /></td>
+                   <td>30</td>
+                   <td>
+                       <input type="button" value="-" class="btn1" />
+                       <input type="text" name="bt1" class="bt1" disabled="disabled"  value="0"/>
+                       <input type="button" value="+" class="btn2" />
+                   </td>
+                   <td id="b1sum">0</td>
+               </tr>
+               <tr>
+                   <td><img src="image/b2.jpg" /></td>
+                   <td>40</td>
+                   <td>
+                       <input type="button" value="-" class="btn1" />
+                       <input type="text" name="bt1" class="bt1" disabled="disabled"  value="0"/>
+                       <input type="button" value="+" class="btn2" />
+                   </td>
+                   <td id="b2sum">0</td>
+               </tr>
+               <tr>
+                   <td><img src="image/b3.jpg" /></td>
+                   <td>50</td>
+                   <td>
+                       <input type="button" value="-" class="btn1" />
+                       <input type="text" name="bt1" class="bt1" disabled="disabled" value="0"/>
+                       <input type="button" value="+" class="btn2" />
+                   </td>
+                   <td id="b3sum">0</td>
+               </tr>
+               <tr>
+                  <td colspan="3"></td>
+                  <td >
+                       <font>合计金额：</font>
+                       <input type="text" name="allt1" id="allt1" value="0" disabled="disabled"/>
+                  </td>
+               </tr>
+       </table>
+</body>
+</html>
