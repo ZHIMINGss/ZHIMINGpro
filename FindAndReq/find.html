@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+        *{ margin:0; padding:0;}
+		#box{ width:500px; margin:50px auto; background-color:#CCC;}
+		#sot,#tit{ position:relative; margin:20px 10px;}
+		.imgbox{ margin:20px 150px;;}
+		img{ width:200px; height:160px;}
+		.ligth{ color:red; font-size:24px; font-weight:900;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查找替换</title>
+<script type="text/javascript">
+//去空格
+String.prototype.Trim = function()
+{
+    return this.replace(/\s/gi,"")
+}
+window.onload=function()
+{
+	     var box=document.getElementById('box');
+		 var sot=document.getElementById('sot');
+		 var tit=document.getElementById('tit');
+		 
+		 var texthtml=document.getElementById('textdiv').innerHTML;
+		 var sob=document.getElementById('sob');
+		 var tib=document.getElementById('tib');
+		 
+		 var so=null;
+		 var tits=null;
+         var newtext=null;
+		 
+		 
+		 
+		 //搜索
+		 sob.onclick=function()
+		 { 
+		     so=sot.value.Trim();
+			 
+			 //alert(so);	
+			 var reg=new RegExp(so,"g");
+			 //没找到
+			 if(!reg.test(texthtml))
+			 {
+				 alert("No Find");
+				 return ;
+				 }
+				 
+				 newtext=texthtml.replace(reg,'<span class="ligth">'+so+'</span>');
+				 document.getElementById('textdiv').innerHTML=newtext;
+			 }
+		 
+		 
+		 //替换
+		 tib.onclick=function()
+		 {
+			 tits=tit.value.Trim();
+			 var i=0;
+			 for(i=0;i<so.length+1;i++)
+			 {
+				 newtext=document.getElementById('textdiv').innerHTML.replace(so,tits);
+			     document.getElementById('textdiv').innerHTML=newtext;
+				 }
+			 }
+		 
+	}
+         
+		 
+</script>
+</head>
+
+<body>
+       <div id="box">
+             <input type="text" name="so" id="sot"  />替换成
+             <input type="text" name="ti" id="tit"  />
+             <input type="button" value="搜索" id="sob"  />
+             <input type="button" value="替换" id="tib"  /><br /><br />
+             <div id="textdiv">
+             达摩是为降伏邪恶而生的。身为王者之子，他苦修经书和拳法，立誓拯救身边不幸的人们，并对自己的使命坚信不疑。但突如其来的叛变席卷王国。父王被毒死，人们哀嚎着被杀害，他也陷入绝境。叛变的头目，也是他的兄弟扼住了无辜孤儿的喉咙，要他交出金印。达摩愤怒了。拳法不再为自己所控制，愤怒将皇宫夷为平地。叛军，连同人质小孩一同粉身碎骨。不明真相的人们怪罪他造成惨剧，唾弃他，驱赶他。他陷入深深的忏悔，开始自我放逐的流浪。最终，倒在路边奄奄一息时，大唐的年轻僧人将他救起。僧人看破他的心魔，告诉他不过是因懦弱逃避。而僧人自己预知大唐将被黑夜笼罩时，却义无反顾踏上旅途。达摩握紧拳头。他本当肩挑凡世，拳握初心。他在迷惘中忘记了走不通的路，应该用拳头来打开。告别僧侣，他毅然迈向相反的方向：大唐。最深的黑夜，往往是光明所在。那里一定有他要寻找的东西。“贫僧自西天而来，要去往东土大唐取经之地。
+             </div>
+             <div class="imgbox">
+                   <img src="image/damo.jpg" />
+             </div>
+        </div>
+</body>
+</html>
