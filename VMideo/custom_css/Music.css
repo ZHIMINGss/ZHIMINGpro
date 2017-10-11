@@ -1,0 +1,61 @@
+ @media only screen and (min-width: 768px) {
+
+         
+			   #slider_sub
+			   {
+			   	      width: 300px; 
+    	      	      margin-top: 51px;
+    	      	      position: absolute;
+    	      	      z-index: 1;
+    	      	      padding: 10px;
+			   }
+			   #page
+			   {
+			   	      margin-left: 300px;
+			   	      margin-top: 51px;
+			   }
+			   #nav_right
+			   {
+			   	 margin-right: 25px;
+			   }
+}
+			   #nav_img
+			   {
+			   	 width: 20px;
+			   	 height: 20px;
+			   }
+#topbg{
+			   	background: url(../img/hf1.jpg);
+			   }  
+			   #titletext{
+			   	color:white;
+			   }
+			   #bgcolor{
+			   	background: white;
+			   	color: #C62F2F;
+			   }
+			   #bgcolors{
+			   	
+			   	color: white;
+			   	}
+#imgsize
+{
+	height: 50px;
+	width: 50px;
+}
+#modalcontent
+{
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+}
+#modalbottom
+{
+	width: 150px;
+	margin: 0 auto;
+}
+#dropmenu
+{
+	width: 220px;
+	align-content: center;
+}

@@ -1,0 +1,42 @@
+
+
+/*body背景*/
+body{
+	background: url(../img/bg1.jpg);
+	background-size: cover;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+/*头部div*/
+.topDiv{
+	height: 380px;
+	border: 1px solid black;
+	background: url(../img/bg2.jpg);
+	
+}
+/*Music按钮Div*/
+#musicBtnDiv{
+	margin-top: 130px;
+}
+
+/*Music按钮*/
+#musicBtn{
+	z-index: 2;
+}
+
+/*底部div*/
+.bottomDiv{
+	height: 350px;
+	border: 1px solid black;
+	margin-top: 30px;
+	background: url(../img/bg3.jpg);
+}
+/*Video按钮Div*/
+#videoBtnDiv{
+	margin-top: 95px;
+}
+#videoh2{
+	color: white;
+}

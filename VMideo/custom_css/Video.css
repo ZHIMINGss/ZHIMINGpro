@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#imglunbo
+{
+	margin-top: 51px;
+}
+#bottomDiv
+{
+	color: white;
+	height: 200px;
+	background: #222222;
+	
+}
+#centers
+{
+    width: 200px;
+	margin: 0 auto;
+	align-content: center;
+	
+}
+
+#more
+{
+	
+	text-align: right;
+}
